@@ -24,6 +24,7 @@
 </template>
 
 <script>
+// hi
 import { ParticlesBg } from "particles-bg-vue";
 import navbar from "@/components/Navbar.vue";
 import about from "@/components/HelloWorld.vue"
@@ -43,6 +44,8 @@ export default {
   },
   methods:{
     handleScroll(event){
+      //get rid
+      console.log(event);
 
     },
     goto(){
