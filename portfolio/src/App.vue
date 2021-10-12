@@ -1,10 +1,8 @@
 <template>
   <div id="app">
     <particles-bg color="#112031" type="cobweb" :bg="true" /> 
-     <header>
-      </header>
       <section>
-        <p class="hello fw-bold">Hello, I'm <span data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in" class="name">Christian Esperon</span><p class="inLetter fw-bold">and I like to build things. </p></p>
+        <p class="hello fw-bold">Hello, I'm <span data-aos="fade-up-left" data-aos-delay="500" data-aos-easing="ease-in" class="name">Christian Esperon</span><p class="inLetter fw-bold">and I like to build things. </p></p>
         <b-button data-aos="fade-up-right" data-aos-delay="650" data-aos-easing="ease-in" class="scrollB fw-bold" @click="hi">View my work <b-icon icon="capslock"></b-icon></b-button>
       </section>
       <div id="div1" class="div" ref="div1">
@@ -13,7 +11,9 @@
         <div v-if="scrollE">
           <navbar :class="{bnav: scrollE }" ></navbar>
         </div>
-      <div id="div2" class="div" ref="div2">-->
+
+      <div id="div2" class="div" ref="div2">
+        <stack class="stack"></stack>
         <about class="about"></about>
 
       </div>
@@ -27,12 +27,14 @@
 import { ParticlesBg } from "particles-bg-vue";
 import navbar from "@/components/Navbar.vue";
 import about from "@/components/HelloWorld.vue"
+import stack from "@/components/techStack.vue"
 import "animate.css";
 export default {
   components: {
     navbar,
     ParticlesBg,
     about,
+    stack,
   },
   computed: {
 
@@ -147,7 +149,11 @@ export default {
     position: fixed;
     top: 0;
     width: 100%;
-    height:62px;
+    height:82px;
+    z-index: 500 
+  }
+  .stack{
+    margin-top:180px;
   }
 
 

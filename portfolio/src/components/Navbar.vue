@@ -1,16 +1,16 @@
 <template>
    <div id="nav">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: transparent;">
-<!--           <div class="circle mx-2 ms-3">
+          <div class="circle mx-2 ms-3">
               <a class="navbar-brand fw-bold" href="#">CE</a>
-          </div> -->
-          <img class="linkImage mx-2 clickable" alt="App logo" src="../assets/link.svg">
-          <img class="gitImage mx-2" alt="App logo" src="../assets/git.svg">              
+          </div>
+<!--           <img class="linkImage mx-2 clickable" alt="App logo" src="../assets/link.svg">
+          <img class="gitImage mx-2" alt="App logo" src="../assets/git.svg">       -->        
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav me-auto ">
               <a class="nav-item nav-link mx-2 fw-bold" href="#" @click="hi">ABOUT</a>
               <a class="nav-item nav-link mx-2 fw-bold" href="#">PROJECTS</a>
               <a class="nav-item nav-link mx-2 fw-bold" href="#">BLOG</a>
@@ -69,12 +69,12 @@ export default {
   // width: 100%; /* Full width */
   height:100%;  
   margin-top:0;
-  background:$blue;
+  background:#091353  ;
 
   .navbar{
     .navbar-nav{
       font-family:$default_font;
-      font-size:18px;
+      font-size:30px;
 
     }
     .navbar-brand{
@@ -83,9 +83,9 @@ export default {
     border:1px solid black;
      box-shadow: 8px 8px 6px #888888;
      .navbar-brand{
-        font-family: $default_font;
+        font-family: $default_font2;
         color:$blue1;
-        font-size:24px;
+        font-size:26px;
      }
      .circle {
         border-radius: 50%;
@@ -93,7 +93,7 @@ export default {
         height: 60px;
         padding: 8px;
 
-        background: $purple3;
+
         border: 2px solid $blue1;
         color: #666;
         text-align: center;
