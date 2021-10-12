@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="hello" >
     <div data-aos="fade-down-right" data-aos-easing="ease-in" data-aos-delay="500">
-      <navbar></navbar>
+<!--       <navbar></navbar> -->
     </div>
 
   </div>
