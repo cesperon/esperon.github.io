@@ -1,25 +1,24 @@
 <template>
   <div id="app">
-    <particles-bg color="#112031" type="cobweb" :bg="true" />
+    <particles-bg color="#112031" type="cobweb" :bg="true" /> 
      <header>
-<!--         <navbar></navbar> -->
       </header>
       <section>
-
         <p class="hello fw-bold">Hello, I'm <span data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in" class="name">Christian Esperon</span><p class="inLetter fw-bold">and I like to build things. </p></p>
         <b-button data-aos="fade-up-right" data-aos-delay="650" data-aos-easing="ease-in" class="scrollB fw-bold" @click="hi">View my work <b-icon icon="capslock"></b-icon></b-button>
       </section>
       <div id="div1" class="div" ref="div1">
         <!-- <about class="about"></about> -->
       </div>
-      <div id="div2" class="div" ref="div2">
+        <div v-if="scrollE">
+          <navbar :class="{bnav: scrollE }" ></navbar>
+        </div>
+      <div id="div2" class="div" ref="div2">-->
         <about class="about"></about>
 
       </div>
       <div id="div3" class="div" ref="div3"></div>      
 <!--       <router-view/> -->
-
-
     </div>
 </template>
 
@@ -28,6 +27,7 @@
 import { ParticlesBg } from "particles-bg-vue";
 import navbar from "@/components/Navbar.vue";
 import about from "@/components/HelloWorld.vue"
+import "animate.css";
 export default {
   components: {
     navbar,
@@ -35,27 +35,29 @@ export default {
     about,
   },
   computed: {
-      scrollPosition: function() {
-          return this.scrollTop;
-      },
+
   },
-  created(){
-      window.addEventListener('scroll', this.handleScroll);
+  data() {
+    return{
+
+      scrollE:null,
+      scrollOut: null,
+    };
+  },
+  mounted() {
+      this.scrollE = false;
+
+      window.addEventListener('scroll', this.updateScroll);
   },
   methods:{
-    handleScroll(event){
-      //get rid
-      console.log(event);
-
-    },
-    goto(){
-      // var element = this.$refs[refName];
-      // var top = element.offsetTop;
-
-      // window.scrollTo(0, top);
-      // const element = document.getElementById('div3');
-      // element.scrollIntoView({behavior: 'smooth'});
-        console.log('hi');
+    updateScroll() {
+        console.log(this.scrollE);
+        this.scrollP = window.scrollY;
+        if(this.scrollP >= 800){
+          this.scrollE = true;
+        }else{
+          this.scrollE = false;
+        }
     },
     hi() {
       const element = document.getElementById('div2');
@@ -120,7 +122,7 @@ export default {
   }
   .div {
     height: 1000px;
-    padding: 20px;
+    // padding: 20px;
     border: 1px solid transparent;
   }
   .inLetter{
@@ -130,6 +132,22 @@ export default {
   }
   .about{
     // margin-top:20px;
+  }
+  .bnav{
+    animation: mymove .5s ease-in-out;
+    @keyframes mymove {
+      from {
+        top:-60px;
+      }
+      to {
+        top:0;
+        }
+      }
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height:62px;
   }
 
 
