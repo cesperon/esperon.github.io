@@ -14,27 +14,40 @@
 
       <div id="div2" class="div" ref="div2">
         <stack class="stack"></stack>
-        <about class="about"></about>
+        <!-- <about class="about"></about> -->
+<!--         <chart class="aboutChart ms-auto" data-aos="fade-up-left" data-aos-delay="500" data-aos-easing="ease-in"></chart> -->
+        <div class="d-flex">
+          <about class="about" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
+          <progressBar class="ms-auto pBar" ></progressBar>
+        </div>
 
       </div>
       <div id="div3" class="div" ref="div3"></div>      
 <!--       <router-view/> -->
+          <contact></contact>
     </div>
 </template>
 
 <script>
-// hi
 import { ParticlesBg } from "particles-bg-vue";
 import navbar from "@/components/Navbar.vue";
 import about from "@/components/HelloWorld.vue"
 import stack from "@/components/techStack.vue"
+import chart from "@/components/aboutChart.vue"
+import progressBar from "@/components/progressBar.vue"
+import contact from "@/components/contactForm.vue"
+
 import "animate.css";
+
 export default {
   components: {
     navbar,
     ParticlesBg,
     about,
     stack,
+    chart,
+    progressBar,
+    contact
   },
   computed: {
 
@@ -113,7 +126,13 @@ export default {
 
   }
   .about{
-    margin-top:0;
+    margin-top:40px;
+    margin-left:400px;
+  }
+  .aboutChart{
+    width:600px;  
+    margin-right:200px;
+    margin-top:20px;
   }
 
   .scrollB:hover{
@@ -154,6 +173,12 @@ export default {
   }
   .stack{
     margin-top:180px;
+  }
+  .pBar{
+      margin-top:40px;
+      margin-right:400px;
+      padding-bottom:0;
+      // box-shadow: 8px 8px 6px #888888;
   }
 
 
