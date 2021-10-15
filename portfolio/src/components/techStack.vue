@@ -133,12 +133,14 @@ export default {
       .changeViewRight{
         border: 1px solid black;
         background: #091353;
-             box-shadow: 8px 8px 6px #888888;
+             // box-shadow: 8px 8px 6px #888888;
+             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
       }
       .changeViewLeft{
         border: 1px solid black;
         background: #091353;
-             box-shadow: 8px 8px 6px #888888; 
+             // box-shadow: 8px 8px 6px #888888;
+             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3); 
       }
     }         
 }

@@ -1,12 +1,14 @@
 <template>
   <div class="hello" >
       <h2 class="fw-bold">About</h2>
-      <img class="profile mx-4" alt="App logo" src="@/assets/chris.jpg" >
-      <p class="aboutText mt-4">I'm a <span class="highlightText">full-stack engineer</span> living in Santa Rosa, Ca 
-        <br>with a background in computer
-        <br>science. I'm passionate about building full stack data driven 
-        <br>applications.
-      </p>
+        <div class="d-flex">
+          <img class="profile mx-4" alt="App logo" src="@/assets/chris.jpg" >
+          <p class="aboutText mt-4" >I'm a <span class="highlightText">full-stack engineer</span> living in Santa Rosa, Ca 
+            <br>with a background in computer
+            <br>science. I'm passionate about building full stack data driven 
+            <br>applications.
+          </p>
+        </div>
   </div>
 </template>
 
@@ -51,7 +53,8 @@ a {
 .profile{
   height:500px;
   width:500px;
-  box-shadow: 8px 8px 6px #888888;
+  // box-shadow: 8px 8px 6px #888888;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
   border-radius:10px;
 }
 .highlightText{
