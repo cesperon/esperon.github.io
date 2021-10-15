@@ -5,36 +5,57 @@
         <p class="hello fw-bold">Hello, I'm <span data-aos="fade-up-left" data-aos-delay="500" data-aos-easing="ease-in" class="name">Christian Esperon</span><p class="inLetter fw-bold">and I like to build things. </p></p>
         <b-button data-aos="fade-up-right" data-aos-delay="650" data-aos-easing="ease-in" class="scrollB fw-bold" @click="hi">View my work <b-icon icon="capslock"></b-icon></b-button>
       </section>
-      <div id="div1" class="div" ref="div1">
-        <!-- <about class="about"></about> -->
+
+      <div v-if="scrollE">
+        <navbar :class="{bnav: scrollE }" ></navbar>
       </div>
-        <div v-if="scrollE">
-          <navbar :class="{bnav: scrollE }" ></navbar>
-        </div>
+
+      <div id="div1" class="div" ref="div1">
+        <!-- <particles-bg color="#112031" type="cobweb" :bg="true" />  -->
+        <stack class="stack"></stack>
+        <div class="d-flex">
+          <about class="about" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
+          <progressBar class="ms-auto pBar" ></progressBar>
+        </div> 
+
+      </div>
 
       <div id="div2" class="div" ref="div2">
-        <stack class="stack"></stack>
-        <about class="about"></about>
-
+        <projects></projects>
       </div>
-      <div id="div3" class="div" ref="div3"></div>      
+
+      <div id="div3" class="div" ref="div3">
+
+        <contact></contact>
+      </div>      
 <!--       <router-view/> -->
+<!--           <contact></contact> -->
+            
     </div>
 </template>
 
 <script>
-// hi
 import { ParticlesBg } from "particles-bg-vue";
 import navbar from "@/components/Navbar.vue";
 import about from "@/components/HelloWorld.vue"
 import stack from "@/components/techStack.vue"
+import chart from "@/components/aboutChart.vue"
+import progressBar from "@/components/progressBar.vue"
+import contact from "@/components/contactForm.vue"
+import projects from "@/components/projects.vue"
+
 import "animate.css";
+
 export default {
   components: {
     navbar,
     ParticlesBg,
     about,
     stack,
+    chart,
+    progressBar,
+    contact,
+    projects
   },
   computed: {
 
@@ -55,14 +76,14 @@ export default {
     updateScroll() {
         console.log(this.scrollE);
         this.scrollP = window.scrollY;
-        if(this.scrollP >= 800){
+        if(this.scrollP >= 1000){
           this.scrollE = true;
         }else{
           this.scrollE = false;
         }
     },
     hi() {
-      const element = document.getElementById('div2');
+      const element = document.getElementById('div1');
       element.scrollIntoView({behavior: 'smooth'});
 
 
@@ -86,6 +107,9 @@ export default {
     padding-top:0;
     padding-left:0;
     padding-right:0;
+  }
+  #div1{
+    margin-top:400px;
   }
   .scrollB{
     margin-top:0;
@@ -113,7 +137,13 @@ export default {
 
   }
   .about{
-    margin-top:0;
+    margin-top:40px;
+    margin-left:400px;
+  }
+  .aboutChart{
+    width:600px;  
+    margin-right:200px;
+    margin-top:20px;
   }
 
   .scrollB:hover{
@@ -154,6 +184,16 @@ export default {
   }
   .stack{
     margin-top:180px;
+
+  }
+  .pBar{
+      margin-top:40px;
+      margin-right:400px;
+      padding-bottom:0;
+      // box-shadow: 8px 8px 6px #888888;
+  }
+  .projects{
+    margin-top:200px;
   }
 
 
