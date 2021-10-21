@@ -2,6 +2,9 @@
   <div id="app">
     <particles-bg color="#112031" type="cobweb" :bg="true" /> 
       <section>
+      <div class="alert alert-primary" role="alert">
+        <h3>Under construction. Some features are currently not working...</h3>
+      </div>
         <p class="hello fw-bold">Hello, I'm <span data-aos="fade-up-left" data-aos-delay="500" data-aos-easing="ease-in" class="name">Christian Esperon</span><p class="inLetter fw-bold">and I like to build things. </p></p>
         <b-button data-aos="fade-up-right" data-aos-delay="650" data-aos-easing="ease-in" class="scrollB fw-bold" @click="hi">View my work <b-icon icon="capslock"></b-icon></b-button>
       </section>
@@ -17,7 +20,6 @@
           <about class="about" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
           <progressBar class="ms-auto pBar" ></progressBar>
         </div> 
-
       </div>
 
       <div id="div2" class="div" ref="div2">
@@ -30,6 +32,29 @@
       </div>      
 <!--       <router-view/> -->
 <!--           <contact></contact> -->
+      <footer>
+          <div class="footer">
+            <ul class="foote_bottom_ul_amrc">
+            <li><a href="http://webenlance.com">Home</a></li>
+            <li><a href="http://webenlance.com">About</a></li>
+            <li><a href="http://webenlance.com">Services</a></li>
+            <li><a href="http://webenlance.com">Pricing</a></li>
+            <li><a href="http://webenlance.com">Blog</a></li>
+            <li><a href="http://webenlance.com">Contact</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+
+            <ul class="social_footer_ul mb-0">
+              <li><a href="http://webenlance.com"><b-icon class="icon" icon="github
+  "></b-icon></a></li>
+              <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+          </div>
+        </footer>
             
     </div>
 </template>
@@ -94,7 +119,11 @@ export default {
 
 <style lang="scss">
 @import 'assets/_shared.scss';
-
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -104,9 +133,8 @@ export default {
   color: #2c3e50;
 
   #div2{
-    padding-top:0;
-    padding-left:0;
-    padding-right:0;
+    background:rgb(238, 240,243);
+
   }
   #div1{
     margin-top:400px;
@@ -153,7 +181,7 @@ export default {
 
   }
   .div {
-    height: 1000px;
+    height: 1200px;
     // padding: 20px;
     border: 1px solid transparent;
   }
@@ -192,10 +220,28 @@ export default {
       padding-bottom:0;
       // box-shadow: 8px 8px 6px #888888;
   }
-  .projects{
+  .projectsHeader{
     margin-top:200px;
   }
+  #div3{
+    margin-top:100px;
+  }
+  .foote_bottom_ul_amrc {
+    list-style-type:none;
+    padding:0px;
+    display:table;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+  }
+  .foote_bottom_ul_amrc li { display:inline;}
+  .foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}  
+  .footer{
+    padding-bottom:0;
 
+    background:grey;
+  }
 
 }
 
