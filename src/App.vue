@@ -183,7 +183,7 @@ export default {
     z-index: 500 
   }
   .stack{
-    margin-top:20px;
+    // margin-top:20px;
 
   }
   .pBar{
