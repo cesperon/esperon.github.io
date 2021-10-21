@@ -58,7 +58,7 @@
             <b>Postgresql</b>
           </b-tooltip>        
       </div>
-      <div class="stackBtn d-flex justify-content-center">
+      <div class="stackBtn d-flex justify-content-center mt-4">
         <b-button class="changeViewLeft mx-1" @click="changeViewLeft"><b-icon class="icon" icon="arrow-left"></b-icon></b-button>
         <b-button class="changeViewRight" @click="changeViewRight"><b-icon class="icon" icon="arrow-right
 "></b-icon></b-button>
@@ -128,7 +128,7 @@ export default {
     } 
 
     .stackBtn{
-      margin-top:50px;
+      // margin-top:50px;
       
       .changeViewRight{
         border: 1px solid black;

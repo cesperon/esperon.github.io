@@ -12,7 +12,7 @@
 
       <div id="div1" class="div" ref="div1">
         <!-- <particles-bg color="#112031" type="cobweb" :bg="true" />  -->
-        <stack class="stack"></stack>
+        <stack class="stack mt-5"></stack>
         <div class="d-flex">
           <about class="about" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
           <progressBar class="ms-auto pBar" ></progressBar>
@@ -183,7 +183,7 @@ export default {
     z-index: 500 
   }
   .stack{
-    margin-top:180px;
+    margin-top:20px;
 
   }
   .pBar{
