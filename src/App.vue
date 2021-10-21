@@ -17,9 +17,6 @@
           <about class="about" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
           <progressBar class="ms-auto pBar" ></progressBar>
         </div> 
-        <div>
-          hi yall
-        </div>
 
       </div>
 
