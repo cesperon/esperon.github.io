@@ -2,7 +2,7 @@
   <div class="stack container">
     <div class="row">
         <div v-if="currently" class="stackImg col-12">
-            <h2 class="stackHeader">Currently Using<b-button class="changeViewLeft mx-4" @click="changeViewLeft"><b-icon class="icon" icon="arrow-left"></b-icon></b-button></h2> 
+            <h2 class="stackHeader">Currently Using<b-button class="changeViewLeft mx-4 mt-0" @click="changeViewLeft"><b-icon class="icon" icon="arrow-left"></b-icon></b-button></h2> 
             <img class="mx-4" id="vue" alt="App logo" src="@/assets/logo.png" data-aos="fade-up-left" data-aos-delay="100" data-aos-easing="ease-in">|
             <img class="mx-4" id="node" alt="App logo" src="@/assets/node.svg" data-aos="fade-up-left" data-aos-delay="200" data-aos-easing="ease-in">|
             <img class="mx-4" id="sequelize" alt="App logo" src="@/assets/sequelize.svg" data-aos="fade-up-left" data-aos-delay="300" data-aos-easing="ease-in">|
@@ -23,7 +23,7 @@
             </b-tooltip>
         </div>
         <div v-else>
-            <h2 class="stackHeader col-12">Experience With<b-button class="changeViewRight mx-4" @click="changeViewRight"><b-icon class="icon" icon="arrow-right
+            <h2 class="stackHeader col-12">Experience With<b-button class="changeViewRight mx-4 mt-0" @click="changeViewRight"><b-icon class="icon" icon="arrow-right
   "></b-icon></b-button>   </h2>
             <img class="mx-4" id="javascript" alt="App logo" src="@/assets/javascript.svg" data-aos="flip-up" data-aos-delay="100" data-aos-easing="ease-in">|
             <img class="mx-4" id="vue" alt="App logo" src="@/assets/logo.png" data-aos="flip-up" data-aos-delay="200" data-aos-easing="ease-in">|

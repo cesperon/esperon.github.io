@@ -1,6 +1,6 @@
 <template>
   <div class="progressBar">
-    <h2>Comfortability Chart <b-icon icon="hand-thumbs-up"></b-icon></h2>
+<!--     <h2>Comfortability Chart <b-icon icon="hand-thumbs-up"></b-icon></h2> -->
     <h5 data-aos="fade-up-left" data-aos-delay="200" data-aos-easing="ease-in">Vue.js</h5>
     <b-progress height="30px" :value="25" variant="success" :striped="striped" :animated="true" class="progBar" show-progress data-aos="fade-up-left" data-aos-delay="200" data-aos-easing="ease-in"></b-progress>
     <h5  data-aos="fade-up-left" data-aos-delay="300" data-aos-easing="ease-in">Node.js</h5>

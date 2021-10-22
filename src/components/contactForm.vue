@@ -7,7 +7,7 @@
             </div>
 
             <fieldset>
-              <legend>Vue Contact Form</legend>
+              <legend>Contact</legend>
               <div>
                 <label class="label" for="name">Name</label>
                 <input type="text" name="name" id="name" required="" v-model="name">

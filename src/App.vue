@@ -6,29 +6,31 @@
         <h3>Under construction. Some features are currently not working...</h3>
       </div>
         <p class="hello fw-bold">Hello, I'm <span data-aos="fade-up-left" data-aos-delay="500" data-aos-easing="ease-in" class="name">Christian Esperon</span><p class="inLetter fw-bold">and I like to build things. </p></p>
-        <b-button data-aos="fade-up-right" data-aos-delay="650" data-aos-easing="ease-in" class="scrollB fw-bold" @click="hi">View my work <b-icon icon="capslock"></b-icon></b-button>
+        <b-button data-aos="fade-up-right" data-aos-delay="650" data-aos-easing="ease-in" class="scrollB fw-bold" @click="scrollToDiv('div1')">View my work <b-icon icon="capslock"></b-icon></b-button>
       </section>
 
       <div v-if="scrollE">
-        <navbar :class="{bnav: scrollE }" ></navbar>
+        <navbar :class="{bnav: scrollE }" @clicked="scrollToDiv"></navbar>
       </div>
 
-      <div id="div1" class="div" ref="div1">
+      <div id="div1" class="container div" ref="div1">
         <!-- <particles-bg color="#112031" type="cobweb" :bg="true" />  -->
         <stack class="stack mt-5 pt-4"></stack>
-        <div class="d-flex">
-          <about class="about" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
-          <progressBar class="ms-auto pBar" ></progressBar>
-        </div> 
+<!--         <div class="container">  -->
+            <div class="row mt-4">
+              <about class="about col-sm" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
+              <progressBar class="ms-auto pBar col-sm" ></progressBar>
+            </div> 
+<!--         </div> -->
       </div>
 
-      <div id="div2" class="div" ref="div2">
-        <projects></projects>
+      <div id="div2" class="container-fluid div" ref="div2">
+        <projects ></projects>
       </div>
 
       <div id="div3" class="div" ref="div3">
 
-        <contact></contact>
+        <contact data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></contact>
       </div>      
 <!--       <router-view/> -->
 <!--           <contact></contact> -->
@@ -43,7 +45,7 @@
             <li><a href="http://webenlance.com">Contact</a></li>
             </ul>
             <!--foote_bottom_ul_amrc ends here-->
-            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+            <p class="text-center">Copyright @2021 | Designed With by <a href="#">cesperon labs </a></p>
 
             <ul class="social_footer_ul mb-0">
               <li><a href="http://webenlance.com"><b-icon class="icon" icon="github
@@ -107,8 +109,9 @@ export default {
           this.scrollE = false;
         }
     },
-    hi() {
-      const element = document.getElementById('div1');
+    scrollToDiv(div) {
+      console.log(div, 'from parent')
+      const element = document.getElementById(div);
       element.scrollIntoView({behavior: 'smooth'});
 
 
@@ -119,11 +122,6 @@ export default {
 
 <style lang="scss">
 @import 'assets/_shared.scss';
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -161,12 +159,10 @@ export default {
     font-weight:900;
     color:black;
     margin-bottom:0;
-
-
   }
   .about{
-    margin-top:40px;
-    margin-left:400px;
+    // margin-top:40px;
+    // margin-left:600px;
   }
   .aboutChart{
     width:600px;  
@@ -190,9 +186,7 @@ export default {
     font-size:40px;
     font-family:$default_font2;
   }
-  .about{
-    // margin-top:20px;
-  }
+
   .bnav{
     animation: mymove .5s ease-in-out;
     @keyframes mymove {
@@ -214,12 +208,6 @@ export default {
     margin-top:20px;
 
   }
-  .pBar{
-      margin-top:40px;
-      margin-right:400px;
-      padding-bottom:0;
-      // box-shadow: 8px 8px 6px #888888;
-  }
   .projectsHeader{
     margin-top:200px;
   }
@@ -236,13 +224,22 @@ export default {
     margin-left: auto;
   }
   .foote_bottom_ul_amrc li { display:inline;}
-  .foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}  
+  .foote_bottom_ul_amrc li a { color:#B1E693; margin:0 12px;}  
   .footer{
     padding-bottom:0;
 
-    background:grey;
+    background:#90AACB;
   }
 
+}
+
+@media only screen and (max-width:500px) {
+  #div1{
+    margin-bottom:300px;
+  }
+  #div2{
+    margin-bottom:900px;
+  }
 }
 
 

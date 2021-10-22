@@ -2,7 +2,7 @@
    <div id="nav">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: transparent;">
           <div class="circle mx-2 ms-3">
-              <a class="navbar-brand fw-bold" href="#">CE</a>
+              <a class="navbar-brand fw-bold" data-aos="fade-down-right" data-aos-delay="400" data-aos-easing="ease-in">CE</a>
           </div>
 <!--           <img class="linkImage mx-2 clickable" alt="App logo" src="../assets/link.svg">
           <img class="gitImage mx-2" alt="App logo" src="../assets/git.svg">       -->        
@@ -11,10 +11,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav me-auto ">
-              <a class="nav-item nav-link mx-2 fw-bold" href="#" @click="hi">ABOUT</a>
-              <a class="nav-item nav-link mx-2 fw-bold" href="#">PROJECTS</a>
-              <a class="nav-item nav-link mx-2 fw-bold" href="#">BLOG</a>
-              <a class="nav-item nav-link mx-2 me-5 fw-bold" href="#">CONTACT</a>
+              <a class="nav-item nav-link mx-2 fw-bold" @click="scroll('div1')">ABOUT</a>
+              <a class="nav-item nav-link mx-2 fw-bold" @click="scroll('div2')">PROJECTS</a>
+              <!-- <a class="nav-item nav-link mx-2 fw-bold" href="#">BLOG</a> -->
+              <a class="nav-item nav-link mx-2 fw-bold" @click="scroll('div3')">CONTACT</a>
+              <a class="nav-item nav-link mx-2 fw-bold" @click="scroll('div3')">RESUME</a>
+<!--               <img class="gitImage mx-2" alt="App logo" src="../assets/git.svg"> 
+              <img class="linkImage mx-2 clickable" alt="App logo" src="../assets/link.svg">    -->
             </div>
           </div>
         </nav>
@@ -32,7 +35,10 @@ export default {
 
   },
   methods:{
-
+      scroll(div){
+        console.log(div)
+          this.$emit('clicked', div)
+      }
   },
 }
 </script>
@@ -70,6 +76,7 @@ export default {
   height:100%;  
   margin-top:0;
   background:#091353  ;
+  color:#B1E693;
 
   .navbar{
     .navbar-nav{
@@ -102,7 +109,7 @@ export default {
      .gitImage{
       height:40px;
       cursor:pointer;
-      // background:white;
+      background:white;
     }
     .linkImage{
       height:40px;

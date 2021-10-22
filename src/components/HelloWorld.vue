@@ -1,14 +1,26 @@
 <template>
-  <div class="hello" >
-      <h2 class="fw-bold">About</h2>
-        <div class="d-flex">
-          <img class="profile mx-4" alt="App logo" src="@/assets/chris.jpg" >
-          <p class="aboutText mt-4" >I'm a <span class="highlightText">full-stack engineer</span> living in Santa Rosa, Ca 
-            <br>with a background in computer
-            <br>science. I'm passionate about building full stack data driven 
-            <br>applications.
-          </p>
+  <div>
+<!--       <h2 class="fw-bold">About</h2> -->
+        <div >
+            <!-- <img class="profile mx-4" alt="App logo" src="@/assets/chris.jpg" >
+            <p class="aboutText mt-4" >I'm a <span class="highlightText">full-stack engineer</span> living in Santa Rosa, Ca 
+              <br>with a background in computer science. I'm  
+              <br>passionate about building full stack data driven 
+              <br>applications.
+            </p> -->
+            <div class="card profile " >
+              <img class="card-img-top" src="@/assets/chris.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p><em>About</em></p>
+                <p class="aboutText mt-4" >I'm a <span class="highlightText">full-stack engineer</span> living in Santa Rosa, Ca 
+                  <br>with a background in computer science. I'm  
+                  <br>passionate about building full stack data driven 
+                  <br>applications.
+                </p>              
+              </div>
+          </div>
         </div>
+
   </div>
 </template>
 
@@ -32,13 +44,6 @@ export default {
   font-size:20px; 
   font-family:$default_font;
 }
-h3 {
-  margin: 40px 0 0;
-}
-h2 {
-  text-decoration:underline;
-  padding-bottom:10px;
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -51,8 +56,8 @@ a {
   color: #42b983;
 }
 .profile{
-  height:500px;
-  width:500px;
+  // height:500px;
+  width:300px;
   // box-shadow: 8px 8px 6px #888888;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
   border-radius:10px;
