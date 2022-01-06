@@ -1,26 +1,28 @@
 //colors
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet");
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet");
-
-$green: #79B4B7;
-$white: #FEFBF3;
-$tan: #F8F0DF;
-$grey: #9D9D9D;
-$blue: rgb(61,138,201);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"rel="stylesheet");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"rel="stylesheet");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300&display=swap");
+$green: #79b4b7;
+$white: #fefbf3;
+$tan: #f8f0df;
+$grey: #9d9d9d;
+$blue: rgb(61, 138, 201);
 
 // pastels
-$blue1: #B5EAEA;
-$blue2: #A1CAE2;
+$blue1: #b5eaea;
+$blue2: #a1cae2;
 
-$green1: #EDF6E5;
-$green2: #7C9473;
+$green1: #edf6e5;
+$green2: #7c9473;
 
-$purple1: #BFA2DB;
-$purple2: #F0D9FF;
-$purple3: #949CDF;
+$purple1: #bfa2db;
+$purple2: #f0d9ff;
+$purple3: #949cdf;
 
-$brown1: #F1CA89;
+$brown1: #f1ca89;
 $nav_logo_padding: 5px;
 
 $default_font: Poppins, sans-serif;
 $default_font2: Architects Daughter, cursive;
+$default_font3: "Lato", sans-serif;
+$default_font4: "Roboto", sans-serif;

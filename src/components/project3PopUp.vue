@@ -10,8 +10,18 @@
             <b-button class="changeImgRight" @click="increment(1)" variant="primary" >-></b-button>
           </div>
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <b-button class="close" @click="closePopUp" variant="primary">close</b-button> 
+            <b>More Information</b>
+            <p class="card-text">Python Interpreter written in C++ that follows Python grammar rules, stores variables in global symbol table and evaluates expressions in post fix order.Supports python 2.7
+            syntax including and not limited to for loops, while loops, variable declaration and function 
+            definitions.</p>
+            <p><b>built with:  </b>
+              <img class="stack-img" id="node" alt="App logo" src="@/assets/c++.svg">
+            </p>
+            <div class="links">
+              Links:
+              <p><a href="https://github.com/cesperon/Python-Interpreter">SRC Code</a></p>
+            </div>     
+            <b-button class="close mt-0" @click="closePopUp" variant="primary">close</b-button> 
           </div>
         </div>
     </div>
@@ -38,17 +48,6 @@ export default {
     closePopUp() {
       this.$emit('clicked', 'python');
     },
-    //handle counter for image gallery
-    // increment(int){
-    //   if(this.imgIndex >= 0 && this.imgIndex <= 3){
-    //     if(this.imgIndex == 0 && int > 0 || this.imgIndex == 3 && int < 0 || this.imgIndex > 0 && this.imgIndex < 3)
-    //     {
-    //         this.imgIndex += int;
-    //     }
-
-    //   }
-    //   console.log(this.imgIndex);
-    // },
   },
 
 };
@@ -91,9 +90,6 @@ export default {
     left:0;
     margin-top:120px;
     margin-left:10px;
-  }
-  .close{
-    margin-top:150px;
   }
 
 }

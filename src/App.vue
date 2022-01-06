@@ -13,13 +13,14 @@
         <navbar :class="{bnav: scrollE }" @clicked="scrollToDiv"></navbar>
       </div>
 
-      <div id="div1" class="container div" ref="div1">
+      <div id="div1" class="container-fluid div" ref="div1">
         <!-- <particles-bg color="#112031" type="cobweb" :bg="true" />  -->
-        <stack class="stack mt-5 pt-4"></stack>
+        <!-- <stack class="stack mt-5 pt-4"></stack> -->
 <!--         <div class="container">  -->
-            <div class="row mt-4">
-              <about class="about col-sm" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
-              <progressBar class="ms-auto pBar col-sm" ></progressBar>
+            <!-- <h2>About Me</h2> -->
+            <div class="row main1">
+              <about class="about col-4" data-aos="fade-up-right" data-aos-delay="500" data-aos-easing="ease-in"></about>
+              <progressBar class="ms-auto pBar col-4" ></progressBar>
             </div> 
 <!--         </div> -->
       </div>
@@ -122,20 +123,26 @@ export default {
 
 <style lang="scss">
 @import 'assets/_shared.scss';
-
+// @import "../assets/_shared.scss";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+
+  font-family:$default_font3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 
   #div2{
-    background:rgb(238, 240,243);
+    background:white;
+
 
   }
   #div1{
+    display:flex;
+    justify-content: center;
     margin-top:400px;
+    background:rgb(238, 240,243);
+  
   }
   .scrollB{
     margin-top:0;
@@ -149,6 +156,14 @@ export default {
     box-shadow: 8px 8px 6px #888888;
 
   }
+  .pBar{
+    width:50%;
+    height:55%;
+  }
+  .main1{
+    width:75%;
+    margin-top:100px;
+  }
   .name{
     color:$blue;
   }
@@ -157,12 +172,12 @@ export default {
     font-family:$default_font2;
     font-size:40px;
     font-weight:900;
-    color:black;
+    color:black;  
     margin-bottom:0;
   }
   .about{
-    // margin-top:40px;
-    // margin-left:600px;
+    height:50%;
+    width:35%;
   }
   .aboutChart{
     width:600px;  
@@ -178,7 +193,6 @@ export default {
   }
   .div {
     height: 1200px;
-    // padding: 20px;
     border: 1px solid transparent;
   }
   .inLetter{
@@ -213,6 +227,7 @@ export default {
   }
   #div3{
     margin-top:100px;
+        background:rgb(238, 240,243);
   }
   .foote_bottom_ul_amrc {
     list-style-type:none;

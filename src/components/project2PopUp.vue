@@ -5,16 +5,33 @@
           <div class="cardImg">
             <b-button class="changeImgLeft" @click="increment(-1)" variant="primary"><-</b-button>
             <div>
-              <img v-if="imgIndex == 0" class="card-img-top" src="@/assets/camp4.png" alt="Card image cap">
-              <img v-if="imgIndex ==1" class="card-img-top" src="@/assets/camp.png" alt="Card image cap">
+              <img v-if="imgIndex == 0" class="card-img-top" src="@/assets/camp.png" alt="Card image cap">
+              <img v-if="imgIndex ==1" class="card-img-top" src="@/assets/camp4.png" alt="Card image cap">
               <img v-if="imgIndex ==2" class="card-img-top" src="@/assets/camp5.png" alt="Card image cap">
               <img v-if="imgIndex ==3" class="card-img-top" src="@/assets/camp3.png" alt="Card image cap">
             </div>
             <b-button class="changeImgRight" @click="increment(1)" variant="primary" >-></b-button>
           </div>
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <b-button class="close" @click="closePopUp" variant="primary">close</b-button> 
+            <b>More Information</b>
+            <p class="card-text">Camp-Find is a social platform for outdoor enthusiasts. Share favorite campsites 
+            with other people who have the same passion. Plan your next outdoor adventure around other members
+            posts, start conversations in the comment section and keep track of all personal posts in user
+            profile section.</p>
+             <p><b>built with:  </b>
+              <img class="stack-img" id="node" alt="App logo" src="@/assets/node.svg">|
+              <img class="stack-img" id="javascript" alt="App logo" src="@/assets/javascript.svg">|
+              <img class="stack-img" id="javascript" alt="App logo" src="@/assets/html.svg">|
+              <img class="stack-img" id="javascript" alt="App logo" src="@/assets/css.svg">|
+            </p>
+            <p><b>key technical features: </b>
+              session authentication | server-side rendering | fuzzy search | google maps integeration
+            </p>
+            <div class="links">
+              Links:
+              <p><a href="https://github.com/cesperon/camp-find">SRC Code</a></p>
+            </div>            
+            <b-button class="close mt-0" @click="closePopUp" variant="primary">close</b-button> 
           </div>
         </div>
     </div>
@@ -95,9 +112,10 @@ export default {
     margin-top:120px;
     margin-left:10px;
   }
-  .close{
-    margin-top:150px;
+  .stack-img{
+    height:20px;
   }
+
 
 }
 </style>
