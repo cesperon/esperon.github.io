@@ -50,6 +50,7 @@ export default {
   font-size: 20px;
   font-weight: 500;
   font-family: $default_font;
+  margin: 10px;
   // width: 500px;
 }
 a {
@@ -72,7 +73,9 @@ a {
 }
 img {
   height: 600px;
-  width: 100%;
-  margin: 0;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
 }
 </style>

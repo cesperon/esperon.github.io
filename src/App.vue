@@ -124,6 +124,19 @@ export default {
 <style lang="scss">
 @import 'assets/_shared.scss';
 // @import "../assets/_shared.scss";
+
+@media only screen and (max-width:500px) {
+  #div1{
+    margin-bottom:300px;
+  }
+  #div2{
+    margin-bottom:900px;
+  }
+  .main1{
+    display:block;
+  }
+}
+
 #app {
 
   font-family:$default_font3;
@@ -248,14 +261,14 @@ export default {
 
 }
 
-@media only screen and (max-width:500px) {
-  #div1{
-    margin-bottom:300px;
-  }
-  #div2{
-    margin-bottom:900px;
-  }
-}
+// @media only screen and (max-width:500px) {
+//   #div1{
+//     margin-bottom:300px;
+//   }
+//   #div2{
+//     margin-bottom:900px;
+//   }
+// }
 
 
 
